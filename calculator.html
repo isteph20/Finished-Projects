@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Scientific Calculator</title>
+    <script>
+      function calculate(form) {
+        var num = parseFloat(form.num.value);
+        var operator = form.operator.value;
+        var result;
+
+        if (operator == "sin") {
+          result = Math.sin(num);
+        } else if (operator == "cos") {
+          result = Math.cos(num);
+        } else if (operator == "tan") {
+          result = Math.tan(num);
+        } else if (operator == "log") {
+          result = Math.log(num);
+        } else if (operator == "sqrt") {
+          result = Math.sqrt(num);
+        } else {
+          result = "Invalid operator";
+        }
+
+        form.result.value = result;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="num" />
+      <select name="operator">
+        <option value="sin">sin</option>
+        <option value="cos">cos</option>
+        <option value="tan">tan</option>
+        <option value="log">log</option>
+        <option value="sqrt">sqrt</option>
+      </select>
+      <input type="button" value="=" onclick="calculate(this.form)" />
+      <input type="text" name="result" />
+    </form>
+  </body>
+</html>
