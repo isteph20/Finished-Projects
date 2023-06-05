@@ -22,8 +22,13 @@
   border-radius: 0.75rem;
 }
 
+.pebbles {
+  height: 100px;
+  border-radius: 50px;
+}
+
 .profile-img {
   height: 100px;
-  border-radius: 50%;
+  border-radius: 50px;
 }
 
